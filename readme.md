@@ -13,17 +13,17 @@ The **CIS Controls Audit Tool** is an interactive web tool designed to help secu
 ### Key Features
 
 - ✅ **Complete CIS Controls v8.1 Coverage** - All 18 Controls and 153 Safeguards
-# ✅ **Interactive Audit Checklist** - Track implementation progress with status indicators  
-# ✅ **Implementation Group Guidance** - Detailed information for IG1, IG2, and IG3
-✅ **Advanced Filtering** - Filter by IG level, asset type, and security function
-✅ **Search Functionality** - Quick search across all controls and safeguards
-✅ **Progress Tracking** - Visual progress indicators and completion statistics
-✅ **Export Capabilities** - Download audit reports for documentation
-✅ **CIS Benchmarks Reference** - Information about 100+ technology benchmarks
-✅ **Framework Mapping** - Alignment with NIST, ISO 27001, PCI-DSS
-✅ **Dark Mode** - Eye-friendly interface for extended use
-✅ **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
-✅ **Offline Capable** - Uses localStorage for data persistence
+- ✅ **Interactive Audit Checklist** - Track implementation progress with status indicators  
+- ✅ **Implementation Group Guidance** - Detailed information for IG1, IG2, and IG3
+- ✅ **Advanced Filtering** - Filter by IG level, asset type, and security function
+- ✅ **Search Functionality** - Quick search across all controls and safeguards
+- ✅ **Progress Tracking** - Visual progress indicators and completion statistics
+- ✅ **Export Capabilities** - Download audit reports for documentation
+- ✅ **CIS Benchmarks Reference** - Information about 100+ technology benchmarks
+- ✅ **Framework Mapping** - Alignment with NIST, ISO 27001, PCI-DSS
+- ✅ **Dark Mode** - Eye-friendly interface for extended use
+- ✅ **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
+- ✅ **Offline Capable** - Uses localStorage for data persistence
 
 ## 🚀 Live Demo
 
