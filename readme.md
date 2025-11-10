@@ -12,7 +12,7 @@ The **CIS Controls Audit Tool** is an interactive web tool designed to help secu
 
 ### Key Features
 
-# ✅ **Complete CIS Controls v8.1 Coverage** - All 18 Controls and 153 Safeguards
+- ✅ **Complete CIS Controls v8.1 Coverage** - All 18 Controls and 153 Safeguards
 # ✅ **Interactive Audit Checklist** - Track implementation progress with status indicators  
 # ✅ **Implementation Group Guidance** - Detailed information for IG1, IG2, and IG3
 ✅ **Advanced Filtering** - Filter by IG level, asset type, and security function
