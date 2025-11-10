@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS Controls v8.1 Audit Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">CIS Controls</h2>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle Sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#" data-page="dashboard" class="nav-link active">Dashboard</a></li>
+            <li><a href="#" data-page="controls" class="nav-link">Controls Explorer</a></li>
+            <li><a href="#" data-page="audit" class="nav-link">Audit Checklist</a></li>
+            <li><a href="#" data-page="implementation" class="nav-link">Implementation Groups</a></li>
+            <li><a href="#" data-page="benchmarks" class="nav-link">Benchmarks</a></li>
+            <li><a href="#" data-page="resources" class="nav-link">Resources</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="mobile-header">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <h1 class="mobile-title">CIS Controls v8.1</h1>
+        </div>
+
+        <!-- Dashboard Page -->
+        <div id="page-dashboard" class="page active">
+            <div class="page-header">
+                <h1>CIS Controls v8.1 Audit Tool</h1>
+                <p class="page-subtitle">Comprehensive reference and audit checklist for cybersecurity controls</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--color-bg-1);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">18</h3>
+                        <p class="stat-label">Controls</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--color-bg-2);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">153</h3>
+                        <p class="stat-label">Safeguards</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--color-bg-3);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">3</h3>
+                        <p class="stat-label">Implementation Groups</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: var(--color-bg-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value">100+</h3>
+                        <p class="stat-label">Benchmarks</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-section">
+                <div class="search-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="globalSearch" placeholder="Search controls, safeguards, or keywords..." class="search-input">
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="card">
+                    <div class="card__body">
+                        <h3>About CIS Controls v8.1</h3>
+                        <p>The CIS Controls are a prioritized set of actions that collectively form a defense-in-depth set of best practices to mitigate common cyber attacks. Released in June 2024, version 8.1 provides a comprehensive framework for cybersecurity.</p>
+                        <h4 style="margin-top: var(--space-16);">Key Features:</h4>
+                        <ul class="feature-list">
+                            <li>Prioritized cybersecurity best practices</li>
+                            <li>Organized into 18 comprehensive controls</li>
+                            <li>153 actionable safeguards</li>
+                            <li>Three implementation groups for scalability</li>
+                            <li>Mapped to multiple compliance frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Implementation Groups</h3>
+                        <div class="ig-summary">
+                            <div class="ig-item">
+                                <span class="ig-badge ig-badge-1">IG1</span>
+                                <div>
+                                    <strong>56 Safeguards</strong>
+                                    <p>Essential cyber hygiene for SMBs</p>
+                                </div>
+                            </div>
+                            <div class="ig-item">
+                                <span class="ig-badge ig-badge-2">IG2</span>
+                                <div>
+                                    <strong>74 Additional (130 total)</strong>
+                                    <p>Mid-sized organizations</p>
+                                </div>
+                            </div>
+                            <div class="ig-item">
+                                <span class="ig-badge ig-badge-3">IG3</span>
+                                <div>
+                                    <strong>23 Additional (153 total)</strong>
+                                    <p>Large enterprises, sensitive data</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="action-grid">
+                    <button class="action-card" data-page="controls">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <h3>Explore Controls</h3>
+                        <p>Browse all 18 CIS Controls with detailed information</p>
+                    </button>
+                    <button class="action-card" data-page="audit">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                        <h3>Start Audit</h3>
+                        <p>Conduct comprehensive audit of all 153 safeguards</p>
+                    </button>
+                    <button class="action-card" data-page="implementation">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="3" x2="9" y2="21"></line>
+                        </svg>
+                        <h3>Implementation Guide</h3>
+                        <p>Learn about IG1, IG2, and IG3 requirements</p>
+                    </button>
+                    <button class="action-card" data-page="benchmarks">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <h3>Benchmarks</h3>
+                        <p>Access 100+ technology-specific benchmarks</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls Explorer Page -->
+        <div id="page-controls" class="page">
+            <div class="page-header">
+                <h1>Controls Explorer</h1>
+                <p class="page-subtitle">Browse and filter all 18 CIS Controls v8.1</p>
+            </div>
+
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="igFilter">Implementation Group:</label>
+                    <select id="igFilter" class="form-control">
+                        <option value="all">All Groups</option>
+                        <option value="IG1">IG1 - Essential</option>
+                        <option value="IG2">IG2 - Intermediate</option>
+                        <option value="IG3">IG3 - Advanced</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="assetFilter">Asset Type:</label>
+                    <select id="assetFilter" class="form-control">
+                        <option value="all">All Asset Types</option>
+                        <option value="Devices">Devices</option>
+                        <option value="Software">Software</option>
+                        <option value="Applications">Applications</option>
+                        <option value="Data">Data</option>
+                        <option value="Users">Users</option>
+                        <option value="Network">Network</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="functionFilter">Security Function:</label>
+                    <select id="functionFilter" class="form-control">
+                        <option value="all">All Functions</option>
+                        <option value="Identify">Identify</option>
+                        <option value="Protect">Protect</option>
+                        <option value="Detect">Detect</option>
+                        <option value="Respond">Respond</option>
+                        <option value="Recover">Recover</option>
+                        <option value="Governance">Governance</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="controlsList" class="controls-list"></div>
+        </div>
+
+        <!-- Audit Checklist Page -->
+        <div id="page-audit" class="page">
+            <div class="page-header">
+                <h1>Audit Checklist</h1>
+                <p class="page-subtitle">Track your implementation progress across all 153 safeguards</p>
+            </div>
+
+            <div class="audit-toolbar">
+                <div class="audit-progress">
+                    <div class="progress-info">
+                        <span>Overall Progress: <strong id="progressPercent">0%</strong></span>
+                        <span id="progressCount">0 of 153 completed</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                <div class="audit-actions">
+                    <button class="btn btn--secondary" id="resetAudit">Reset Progress</button>
+                    <button class="btn btn--primary" id="exportAudit">Export Results</button>
+                </div>
+            </div>
+
+            <div class="audit-filters">
+                <select id="auditIgFilter" class="form-control">
+                    <option value="all">All Implementation Groups</option>
+                    <option value="IG1">IG1 Only</option>
+                    <option value="IG2">IG2 Only</option>
+                    <option value="IG3">IG3 Only</option>
+                </select>
+                <select id="auditStatusFilter" class="form-control">
+                    <option value="all">All Statuses</option>
+                    <option value="Not Started">Not Started</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Not Applicable">Not Applicable</option>
+                </select>
+            </div>
+
+            <div id="auditList" class="audit-list"></div>
+        </div>
+
+        <!-- Implementation Groups Page -->
+        <div id="page-implementation" class="page">
+            <div class="page-header">
+                <h1>Implementation Groups</h1>
+                <p class="page-subtitle">Understand the three tiers of CIS Controls implementation</p>
+            </div>
+
+            <div class="ig-cards">
+                <div class="ig-card">
+                    <div class="ig-card-header" style="background: var(--color-bg-1);">
+                        <span class="ig-badge ig-badge-1">IG1</span>
+                        <h2>Implementation Group 1</h2>
+                    </div>
+                    <div class="ig-card-body">
+                        <div class="ig-stat">
+                            <strong>56 Safeguards</strong>
+                            <p>Essential cyber hygiene</p>
+                        </div>
+                        <h4>Target Audience:</h4>
+                        <p>Small to medium enterprises with limited IT and cybersecurity expertise. Organizations seeking basic cyber hygiene.</p>
+                        <h4>Key Characteristics:</h4>
+                        <ul>
+                            <li>Limited resources and staff</li>
+                            <li>Basic security infrastructure</li>
+                            <li>Essential protection focus</li>
+                            <li>Lower maturity level</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ig-card">
+                    <div class="ig-card-header" style="background: var(--color-bg-2);">
+                        <span class="ig-badge ig-badge-2">IG2</span>
+                        <h2>Implementation Group 2</h2>
+                    </div>
+                    <div class="ig-card-body">
+                        <div class="ig-stat">
+                            <strong>130 Safeguards</strong>
+                            <p>IG1 + 74 additional</p>
+                        </div>
+                        <h4>Target Audience:</h4>
+                        <p>Mid-sized organizations with multiple departments and moderate IT resources. Organizations managing more complex environments.</p>
+                        <h4>Key Characteristics:</h4>
+                        <ul>
+                            <li>Multiple departments/sites</li>
+                            <li>Dedicated IT team</li>
+                            <li>More sensitive data</li>
+                            <li>Moderate maturity level</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ig-card">
+                    <div class="ig-card-header" style="background: var(--color-bg-3);">
+                        <span class="ig-badge ig-badge-3">IG3</span>
+                        <h2>Implementation Group 3</h2>
+                    </div>
+                    <div class="ig-card-body">
+                        <div class="ig-stat">
+                            <strong>153 Safeguards</strong>
+                            <p>All safeguards (IG1+IG2 + 23 additional)</p>
+                        </div>
+                        <h4>Target Audience:</h4>
+                        <p>Large enterprises and organizations handling highly sensitive data. Critical infrastructure and those with dedicated security teams.</p>
+                        <h4>Key Characteristics:</h4>
+                        <ul>
+                            <li>Dedicated security team</li>
+                            <li>Highly sensitive data</li>
+                            <li>Complex IT environments</li>
+                            <li>High maturity level</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: var(--space-24);">
+                <div class="card__body">
+                    <h2>Choosing Your Implementation Group</h2>
+                    <div class="comparison-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Criteria</th>
+                                    <th>IG1</th>
+                                    <th>IG2</th>
+                                    <th>IG3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Organization Size</strong></td>
+                                    <td>Small to Medium</td>
+                                    <td>Medium to Large</td>
+                                    <td>Large Enterprise</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>IT Resources</strong></td>
+                                    <td>Limited</td>
+                                    <td>Moderate</td>
+                                    <td>Extensive</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Security Team</strong></td>
+                                    <td>None or minimal</td>
+                                    <td>Dedicated IT security staff</td>
+                                    <td>Full security operations team</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Data Sensitivity</strong></td>
+                                    <td>Standard business data</td>
+                                    <td>Moderate sensitive data</td>
+                                    <td>Highly sensitive/regulated</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Compliance</strong></td>
+                                    <td>Basic requirements</td>
+                                    <td>Industry standards</td>
+                                    <td>Strict regulatory compliance</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benchmarks Page -->
+        <div id="page-benchmarks" class="page">
+            <div class="page-header">
+                <h1>CIS Benchmarks</h1>
+                <p class="page-subtitle">100+ technology-specific security configuration guidelines</p>
+            </div>
+
+            <div class="card">
+                <div class="card__body">
+                    <h2>About CIS Benchmarks</h2>
+                    <p>CIS Benchmarks are consensus-based, best-practice security configuration guides developed by cybersecurity professionals worldwide. They provide prescriptive guidance for establishing secure baselines across various technologies.</p>
+                </div>
+            </div>
+
+            <div class="benchmarks-grid">
+                <div class="benchmark-category">
+                    <div class="category-header" style="background: var(--color-bg-1);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <h3>Operating Systems (25+)</h3>
+                    </div>
+                    <ul class="benchmark-list">
+                        <li>Windows Server 2019/2022</li>
+                        <li>Ubuntu Linux 20.04/22.04</li>
+                        <li>Red Hat Enterprise Linux 8/9</li>
+                        <li>macOS 13/14</li>
+                        <li>Oracle Linux</li>
+                        <li>Debian Linux</li>
+                    </ul>
+                </div>
+
+                <div class="benchmark-category">
+                    <div class="category-header" style="background: var(--color-bg-2);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                        <h3>Cloud Platforms (15+)</h3>
+                    </div>
+                    <ul class="benchmark-list">
+                        <li>Amazon Web Services (AWS)</li>
+                        <li>Microsoft Azure</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Oracle Cloud Infrastructure</li>
+                        <li>IBM Cloud</li>
+                        <li>Alibaba Cloud</li>
+                    </ul>
+                </div>
+
+                <div class="benchmark-category">
+                    <div class="category-header" style="background: var(--color-bg-3);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                        </svg>
+                        <h3>Server Software (20+)</h3>
+                    </div>
+                    <ul class="benchmark-list">
+                        <li>Apache HTTP Server</li>
+                        <li>NGINX</li>
+                        <li>Microsoft IIS</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Tomcat</li>
+                    </ul>
+                </div>
+
+                <div class="benchmark-category">
+                    <div class="category-header" style="background: var(--color-bg-4);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <path d="M21 15l-5-5L5 21"></path>
+                        </svg>
+                        <h3>Desktop Software (12+)</h3>
+                    </div>
+                    <ul class="benchmark-list">
+                        <li>Microsoft 365</li>
+                        <li>Google Workspace</li>
+                        <li>Google Chrome</li>
+                        <li>Mozilla Firefox</li>
+                        <li>Zoom</li>
+                        <li>Microsoft Edge</li>
+                    </ul>
+                </div>
+
+                <div class="benchmark-category">
+                    <div class="category-header" style="background: var(--color-bg-5);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                        <h3>Mobile Devices (8+)</h3>
+                    </div>
+                    <ul class="benchmark-list">
+                        <li>Apple iOS 16/17</li>
+                        <li>Android 13/14</li>
+                        <li>Mobile Device Management</li>
+                        <li>Microsoft Intune</li>
+                    </ul>
+                </div>
+
+                <div class="benchmark-category">
+                    <div class="category-header" style="background: var(--color-bg-6);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        <h3>Network Devices (18+)</h3>
+                    </div>
+                    <ul class="benchmark-list">
+                        <li>Cisco IOS</li>
+                        <li>Palo Alto Networks</li>
+                        <li>Fortinet FortiOS</li>
+                        <li>Juniper Networks</li>
+                        <li>F5 BIG-IP</li>
+                        <li>Check Point</li>
+                    </ul>
+                </div>
+
+                <div class="benchmark-category">
+                    <div class="category-header" style="background: var(--color-bg-7);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                        <h3>Databases (10+)</h3>
+                    </div>
+                    <ul class="benchmark-list">
+                        <li>Microsoft SQL Server</li>
+                        <li>Oracle Database</li>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>MariaDB</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: var(--space-24);">
+                <div class="card__body">
+                    <h2>Accessing CIS Benchmarks</h2>
+                    <p>CIS Benchmarks are available for free from the Center for Internet Security. Visit the official CIS website to:</p>
+                    <ul>
+                        <li>Download benchmarks in PDF and automated formats</li>
+                        <li>Access the CIS-CAT Pro assessment tool</li>
+                        <li>Join the CIS community and contribute to benchmark development</li>
+                        <li>Stay updated on the latest benchmark releases</li>
+                    </ul>
+                    <a href="https://www.cisecurity.org/cis-benchmarks/" target="_blank" class="btn btn--primary" style="margin-top: var(--space-16);">Visit CIS Benchmarks</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources Page -->
+        <div id="page-resources" class="page">
+            <div class="page-header">
+                <h1>Resources &amp; Implementation Guide</h1>
+                <p class="page-subtitle">Best practices, framework mappings, and useful tools</p>
+            </div>
+
+            <div class="resources-grid">
+                <div class="card">
+                    <div class="card__body">
+                        <h2>Quick Reference</h2>
+                        <h4>Security Functions:</h4>
+                        <ul>
+                            <li><strong>Identify:</strong> Understanding business context, resources, and risks</li>
+                            <li><strong>Protect:</strong> Safeguarding critical infrastructure and information</li>
+                            <li><strong>Detect:</strong> Implementing activities to discover cybersecurity events</li>
+                            <li><strong>Respond:</strong> Taking action regarding detected incidents</li>
+                            <li><strong>Recover:</strong> Restoring capabilities impaired by incidents</li>
+                            <li><strong>Governance:</strong> Managing and directing cybersecurity programs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__body">
+                        <h2>Asset Types</h2>
+                        <ul>
+                            <li><strong>Devices:</strong> Enterprise assets, end-user devices, servers, IoT, network devices</li>
+                            <li><strong>Software:</strong> Operating systems, applications, services, libraries, APIs</li>
+                            <li><strong>Data:</strong> Sensitive data, log data, physical data</li>
+                            <li><strong>Users:</strong> User accounts, administrator accounts, service accounts</li>
+                            <li><strong>Network:</strong> Network infrastructure and architecture</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__body">
+                        <h2>Implementation Best Practices</h2>
+                        <ol>
+                            <li><strong>Start with IG1:</strong> Build a strong foundation with essential controls</li>
+                            <li><strong>Conduct Gap Analysis:</strong> Assess your current security posture</li>
+                            <li><strong>Prioritize by Risk:</strong> Focus on highest-risk areas first</li>
+                            <li><strong>Use Automation:</strong> Leverage tools for continuous monitoring</li>
+                            <li><strong>Document Everything:</strong> Maintain records of implementation</li>
+                            <li><strong>Regular Reviews:</strong> Continuously assess and improve</li>
+                            <li><strong>Train Your Team:</strong> Ensure staff understand their roles</li>
+                            <li><strong>Measure Progress:</strong> Track metrics and KPIs</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__body">
+                        <h2>Framework Mappings</h2>
+                        <p>CIS Controls map to multiple compliance frameworks:</p>
+                        <h4>NIST Cybersecurity Framework:</h4>
+                        <ul>
+                            <li>Direct mapping to all five functions (Identify, Protect, Detect, Respond, Recover)</li>
+                            <li>Provides actionable implementation of NIST CSF</li>
+                        </ul>
+                        <h4>ISO 27001/27002:</h4>
+                        <ul>
+                            <li>Aligns with ISO information security controls</li>
+                            <li>Supports ISO 27001 certification efforts</li>
+                        </ul>
+                        <h4>PCI-DSS:</h4>
+                        <ul>
+                            <li>Covers many Payment Card Industry requirements</li>
+                            <li>Supports PCI compliance objectives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__body">
+                        <h2>Recommended Tools</h2>
+                        <h4>Assessment Tools:</h4>
+                        <ul>
+                            <li><strong>CIS-CAT Pro:</strong> Automated configuration assessment</li>
+                            <li><strong>CIS RAM:</strong> Risk Assessment Method</li>
+                            <li><strong>CIS CSAT:</strong> Controls Self-Assessment Tool</li>
+                        </ul>
+                        <h4>Implementation Tools:</h4>
+                        <ul>
+                            <li>Asset management systems</li>
+                            <li>Vulnerability scanners</li>
+                            <li>Security information and event management (SIEM)</li>
+                            <li>Configuration management databases (CMDB)</li>
+                            <li>Endpoint detection and response (EDR)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__body">
+                        <h2>Official Resources</h2>
+                        <ul>
+                            <li><a href="https://www.cisecurity.org/controls" target="_blank">CIS Controls Official Page</a></li>
+                            <li><a href="https://www.cisecurity.org/cis-benchmarks" target="_blank">CIS Benchmarks</a></li>
+                            <li><a href="https://www.cisecurity.org/tools" target="_blank">CIS Tools &amp; Resources</a></li>
+                            <li><a href="https://www.cisecurity.org/insights" target="_blank">CIS Insights &amp; Blog</a></li>
+                            <li><a href="https://learn.cisecurity.org" target="_blank">CIS Learning Platform</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
