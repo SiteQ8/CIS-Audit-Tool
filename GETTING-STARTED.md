@@ -342,5 +342,5 @@ Happy auditing! 🔒
 
 ---
 
-*Last Updated: November 2024*
+*Last Updated: November 2025*
 *CIS Controls Version: 8.1*
